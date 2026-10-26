@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset = "UTF-8">
-    <meta name = "viewport" content = "width = device-width,initial-scale = 1">
-      <title>
-      Module 02 Assignment
-    </title>
-    <body>
-      <header>
-        <h1>Apartment Search</h1>
-      </header>
-      <main>
-        <form action="">
-          <div>
-            <label for="Location">Location: </label>
-            <input type="text" id="Location" name="Location">
-          </div>
-
-          <br />
-
-          <div>
-        
-            <label for="Price">Price: </label>
-            <input type="range" id ="Price" name = "Price">
-          </div>
-
-          <br />
-
-          <div>
-            <label for="Bedrooms">Number of Bedrooms: </label>
-            <input type="number" id="Bedrooms" name="Bedrooms">
-
-          </div>
-          <br />
-          <div>
-            <label for="Bathrooms">Number of Bathrooms: </label>
-            <input type="number" id="Bathrooms" name="Bathrooms">
-          </div>
-          <br />
-
-          <div>
-              <label for="pets">Pets Allowed: </label>
-              <input type="checkbox" id="pets" name= "pets">
-          </div>
-          <br />
-          <div>
-            <label for="date">Date Available: </label>
-            <input type="date" name="date" id="date">
-          </div>
-          <br />
-          <div>
-            <input type="submit" id="Button" name="Button">
-          </div>
-        </form>
-
-      </main>
-    </body>
-  </head>
+<head> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing </title>
+</head>
+<body>
+  <div class = "container">
+    <div class=" Pricing">
+      <div class ="card">
+        <h2>Free</h2>
+        <p class = "price"> <sup class="currency">$</sup></p>
+        <p class = "price-info"><strong>Great For Starter </strong></p>
+        <p class = "main text">Discover For Creating New Project</p>
+        <a href="#" class = "btn">Get Started</a>
+        <ul>
+          <li>1 User</li>
+          <li>5 Projects</li>
+          <li>10 GB Storage</li>
+          <li>Priority Supports</li>
+        </ul>
+      </div>
+      <div class = "card">
+        <h2>Pro</h2>
+        <p class="price">
+            <sup>$</sup>10<span>/mo</span>
+          </p>
+         <p class="price-info"><strong>For Planned Projects</strong></p>
+          <p class="main-text">
+            Bring your designs to the next level and export them.
+          </p>
+          <a href="#" class="btn btn-primary">Get Started</a>
+          <ul>
+            <li>5 Users</li>
+            <li>50 Projects</li>
+            <li>100GB Storage</li>
+            <li>Priority Support</li>
+          </ul> 
+      </div>
+      <div class="card">
+          <h2>Enterprise</h2>
+          <p class="price">
+            <sup>$</sup>12<span>/mo</span>
+          </p>
+          <p class="price-info"><strong>For Professional Use</strong></p>
+          <p class="main-text">
+            Enjoy limitless use with interactive export options.
+          </p>
+          <a href="#" class="btn">Get Started</a>
+          <ul>
+            <li>Unlimited Users</li>
+            <li>Unlimited Projects</li>
+            <li>Unlimited Storage</li>
+            <li>Priority Support</li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</body>
 </html>
