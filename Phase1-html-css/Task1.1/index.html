@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"
+    <title></title>
+</head>
+<body>
+  <div class="flag-container">
+    <div class="bangladeshi-flag">
+        <div class="circle"></div>
+    </div>
+  </div>
+  <style>
+    .flag-container{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:20px;
+        background-color:#f4f4f4;
+    }
+    .bangladeshi-flag{
+        width:500px;
+        aspect-ratio:10/6;
+        background-color:#006a4e;
+        position:relative;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        overflow:hidden;
+    }
+    .circle{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        width:200px;
+        aspect-ratio:1/1;
+        background-color:#f42a41;
+        border-radius:50%;
+    }
+  </style>
+</body>
+</html>
