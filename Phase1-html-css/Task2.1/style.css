@@ -1,0 +1,425 @@
+/* ---------- General ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background: #2f6df6;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #1d4fc4;
+}
+
+
+/* ---------- Navbar ---------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #222;
+    font-size: 14px;
+}
+
+
+/* ---------- Hero ---------- */
+.hero {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* dark layer on top of the photo */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    max-width: 500px;
+    margin: 0 auto 20px;
+    font-size: 14px;
+}
+
+/* Book Now*/
+.hero-content .btn {
+    background: white;
+    color: #222;
+}
+
+.hero-content .btn:hover,
+.hero-content .btn:active {
+    background: #2f6df6;
+    color: white;
+}
+
+.slider {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.slider img {
+    width: 30px;
+}
+
+.slider_indicator {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.slider_indicator img {
+    width: 180px;
+    margin: 0 auto;
+}
+
+
+/* ---------- About ---------- */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 80px;
+}
+
+.about img {
+    width: 45%;
+    border-radius: 4px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+/* - Packages - */
+.package-section-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+    width: 90%;
+    max-width: 900px;
+    margin: 90px auto 0;
+}
+
+.package-section-container .section-title {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.package-card,
+.package-card-popular {
+    flex: 1;
+    min-width: 180px;
+}
+
+.package-card h2,
+.package-card-popular h2 {
+    font-size: 28px;
+}
+
+.package-card p,
+.package-card-popular p {
+    color: #888;
+    font-size: 12px;
+    margin: 8px 0 15px;
+}
+
+.package-card li,
+.package-card-popular li {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.package-card li::before,
+.package-card-popular li::before {
+    content: "✓ ";
+    color: #2f6df6;
+}
+
+.package-card .btn {
+    background: #eef3ff;
+    color: #2f6df6;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+/* the blue highlighted card */
+.package-card-popular {
+    position: relative;
+    padding: 30px 20px;
+    background: #2f6df6;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(47, 109, 246, 0.4);
+}
+
+.package-card-popular p,
+.package-card-popular li::before {
+    color: white;
+}
+
+.package-card-popular .btn {
+    display: block;
+    text-align: center;
+    background: white;
+    color: #2f6df6;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 2px 12px;
+    background: red;
+    color: white;
+    font-size: 11px;
+    border-radius: 20px;
+}
+
+
+/* -- Testimonials -- */
+.testimonial-section {
+    margin-top: 100px;
+}
+
+.testimonials {
+    display: flex;
+    gap: 20px;
+}
+
+.testimonial-card {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+    color: #555;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.testimonial-card img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 0 auto 5px;
+}
+
+.testimonial-card small {
+    color: #888;
+}
+
+
+/* -- FAQ -- */
+.faq-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 100px auto 80px;
+}
+
+.faq-section .section-title {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.faq-content,
+.faq-image {
+    flex: 1;
+    min-width: 280px;
+}
+
+.faq-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+details {
+    border: 1px solid #ddd;
+    margin-bottom: -1px;
+}
+
+summary {
+    padding: 14px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+details p {
+    padding: 0 16px 16px;
+    font-size: 13px;
+    color: #888;
+}
+
+
+/* -- Footer -- */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 12%;
+    background: #0b1020;
+    color: white;
+}
+
+.footer p {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 50px;
+}
+
+#subscribe h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#subscribe img {
+    width: 120px;
+    margin-bottom: 8px;
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        height: 380px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .about,
+    .testimonials {
+        flex-direction: column;
+    }
+
+    .about img {
+        width: 100%;
+    }
+
+    .package-card-popular {
+        margin: 15px 0;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        gap: 25px;
+        padding: 40px 20px;
+    }
+
+    .footer p {
+        margin-top: 0;
+    }
+}
