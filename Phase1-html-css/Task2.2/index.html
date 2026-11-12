@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resturant </title>
+    <title>Restaurant</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,9 +18,14 @@
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <div class ="logo-icon"><i class="fa-solid fa-utensils"></i></div>
-                    Resturant
+                    <div class="logo-icon"><i class="fa-solid fa-utensils"></i></div>
+                    Restaurant
                 </div>
+
+              
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -25,29 +36,31 @@
                 </ul>
                 <a href="#book" class="btn btn-yellow">Book a Table</a>
             </nav>
-            <div class="hero-container" id="home">
-                <div class="hero-container">
-                    <h1 class="hero-title">TASTE THE AUTHENTIC <br>SAUDI CUISINE</h1>
-                    <P class="hero-desc">Among The Best Saudi Chefs Resturant In The World,Serving You Something Beyond Flavor.</P>
-                    <a href="#menu" class="btn btn-yellow">Explore Menu</a>
 
+            <!-- CHANGE 3: outer class renamed hero-container -> hero-grid, inner renamed -> hero-content
+                 (you had two divs with the same class, one inside the other) -->
+            <div class="hero-grid" id="home">
+                <div class="hero-content">
+                    <h1 class="hero-title">TASTE THE AUTHENTIC <br>SAUDI CUISINE</h1>
+                    <p class="hero-desc">Among The Best Saudi Chefs Restaurant In The World, Serving You Something Beyond Flavor.</p>
+                    <a href="#menu" class="btn btn-yellow">Explore Menu</a>
                 </div>
                 <div class="hero-image-wrapper">
                     <img src="Assets/image01.png" alt="Authentic Saudi Cuisine Platter" class="hero-img">
                     <div class="offer-badge">
-                        <span>TODAY</span>
-                        <span>OFFER</span>
+                    
                     </div>
                 </div>
             </div>
         </div>
     </header>
-     <!-- About Section -->
-      <section class="about-container" id="about">
+
+    <!-- About Section -->
+    <section class="about-container" id="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-image-box">
-                    <img src="Assets/burgers.jpg" class="about-img">
+                    <img src="Assets/edward-franklin.jpg" alt="Burger and drink" class="about-img">
                     <div class="experience-badge">
                         <div class="exp-number">50+</div>
                         <div class="exp-text">Market <br>Experience</div>
@@ -57,10 +70,10 @@
                     <div class="about-tabs">
                         <span class="tab active">About</span>
                         <span class="tab">Experience</span>
-                        <span class="tab">Contact </span>
+                        <span class="tab">Contact</span>
                     </div>
-                    <h2 class="section-heading">EXEPTIONAL CULINARY EXPERIENCE AND DELICIOUS FOOD</h2>
-                    <P class="about-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</P>
+                    <h2 class="section-heading">EXCEPTIONAL CULINARY EXPERIENCE AND DELICIOUS FOOD</h2>
+                    <p class="about-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <div class="about-actions">
                         <a href="#about" class="btn btn-yellow">About More</a>
                         <div class="phone-contact">
@@ -71,10 +84,10 @@
                 </div>
             </div>
         </div>
-      </section>
+    </section>
 
-                   <!--Features Section-->
-       <section class="features-section">
+    <!--Features Section-->
+    <section class="features-section">
         <div class="container">
             <div class="features-grid">
                 <div class="feature-item">
@@ -84,15 +97,16 @@
                         <p class="feature-desc">Within 30 Minutes</p>
                     </div>
                 </div>
+                <!-- CHANGE 4: fixed broken tags. The <i> icon was outside .feature-icon and there was an extra </div> -->
                 <div class="feature-item">
-                    <div class="feature-icon"></div><i class="fa-solid fa-utensils"></i></div>
+                    <div class="feature-icon"><i class="fa-solid fa-utensils"></i></div>
                     <div>
                         <h3 class="feature-title">ABSOLUTE DINING</h3>
-                        <p class="feature-desc">Best Buffet Resturant</p>
+                        <p class="feature-desc">Best Buffet Restaurant</p>
                     </div>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon"></div><i class="fa-solid fa-bag-shopping"></i></div>
+                    <div class="feature-icon"><i class="fa-solid fa-bag-shopping"></i></div>
                     <div>
                         <h3 class="feature-title">PICKUP DELIVERY</h3>
                         <p class="feature-desc">Grab Your Food Order</p>
@@ -100,14 +114,14 @@
                 </div>
             </div>
         </div>
-       </section>
-       <!--Food Section-->
+    </section>
 
-       <section class="popular-section" id="menu">
+    <!--Food Section-->
+    <section class="popular-section" id="menu">
         <div class="container">
             <div class="popular-header">
                 <div>
-                    <div class="section-tag">Crispy,Every Bite Taste</div>
+                    <div class="section-tag">Crispy, Every Bite Taste</div>
                     <h2 class="section-heading">POPULAR FOOD ITEMS</h2>
                 </div>
                 <div class="sidebar-controls">
@@ -132,21 +146,22 @@
                     <p class="food-desc">Barbecue Italian Cuisine</p>
                 </div>
                 <div class="food-card">
-                    <img src="Assets/chiken.png" alt="Cuisine Chiken" class="food-img">
+                    <img src="Assets/chiken.png" alt="Cuisine Chicken" class="food-img">
                     <h3 class="food-title">CUISINE CHICKEN</h3>
-                    <p class="food-desc">Japanese Cuisine Chiken</p>
+                    <p class="food-desc">Japanese Cuisine Chicken</p>
                 </div>
             </div>
         </div>
-       </section>
-     <!--Booking -->
+    </section>
+
+    <!--Booking -->
     <section class="booking-section" id="book">
         <div class="container booking-container">
             <div class="booking-content">
                 <div class="section-tag tag-red">Book Now</div>
                 <h2 class="section-heading text-white">BOOK YOUR TABLE</h2>
                 <p class="booking-desc">Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel tincidunt id blandit netus.</p>
-                
+
                 <form class="booking-form" onsubmit="event.preventDefault();">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Your Name *" required>
@@ -173,6 +188,8 @@
             </div>
         </div>
     </section>
+
+    <!--Testimonial-->
     <section class="testimonial-section" id="clients">
         <div class="container">
             <div class="testimonial-header">
@@ -190,7 +207,7 @@
                 <div class="testimonial-content">
                     <div>
                         <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-                        <p class="testimonial-text">"You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy & soft (usually mandi chicken is a bit dry). I would definitely recommend it."</p>
+                        <p class="testimonial-text">"You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly, juicy &amp; soft (usually mandi chicken is a bit dry). I would definitely recommend it."</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="author-name">KHALID AL MANSOOR</div>
@@ -202,47 +219,50 @@
                 </div>
             </div>
         </div>
+    </section>
+    <!-- CHANGE 5: added the missing </section> above. Your footer was inside the testimonial section -->
 
-        <!--Footer-->
-         <footer id="contact">
-            <div class="container">
-                <h2 class="footer-heading">WE READY TO HAVE YOU THE BEST DINING EXPERIENCE</h2>
+    <!--Footer-->
+    <footer id="contact" class="footer-section">
+        <div class="footer-bg-wrapper">
+            <img src="Assets/interior.jpg" alt="Restaurant Interior Background" class="footer-bg-img">
+        </div>
+        <div class="container footer-content-container">
+            <h2 class="footer-heading">WE READY TO HAVE YOU THE BEST DINING EXPERIENCE</h2>
 
-                <div class="footer-grid">
-                    <div class="footer-col">
-                        <div class="footer-col-icon"><i class="fa-regular fa-clock"></i></div>
-                        <h4 class="footer-col-title">OPENING HOURS</h4>
-                        <p class="footer-col-text">MONDAY - SUNDAY <br>9.00 AM to 11.30 PM</p>
-                    </div>
-                    <div class="footer-col">
-                        <div class="footer-col-icon"><i class="fa-solid fa-phone"></i></div>
-                        <h4 class="footer-col-title">LET'S TALK</h4>
-                        <p class="footer-col-text">Phone:1-800-222-4545 <br> Fax:1-800-222-4545</p>
-                    </div>
-                    <div class="footer-col">
-                        <div class="footer-col-icon"><i class="fa-regular fa-envelope"></i></div>
-                        <h4 class="footer-col-title">BOOK A TABLE</h4>
-                        <p class="footer-col-text">Email: demo@website.com<br>Support: support@website.com</p>
-                    </div>
-                    <div class="footer-col">
-                        <div class="footer-col-icon"><i class="fa-solid fa-map-marker-alt"></i></div>
-                        <h4 class="footer-col-title">OUR ADDRESS</h4>
-                        <p class="footer-col-text">123 Street New York City, United <br>States Of America</p>
-                    </div>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-col-icon"><i class="fa-regular fa-clock"></i></div>
+                    <h4 class="footer-col-title">OPENING HOURS</h4>
+                    <p class="footer-col-text">MONDAY - SUNDAY <br>9.00 AM to 11.30 PM</p>
                 </div>
-                <div class="social-links">
+                <div class="footer-col">
+                    <div class="footer-col-icon"><i class="fa-solid fa-phone"></i></div>
+                    <h4 class="footer-col-title">LET'S TALK</h4>
+                    <p class="footer-col-text">Phone: 1-800-222-4545 <br> Fax: 1-800-222-4545</p>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-icon"><i class="fa-regular fa-envelope"></i></div>
+                    <h4 class="footer-col-title">BOOK A TABLE</h4>
+                    <p class="footer-col-text">Email: demo@website.com<br>Support: support@website.com</p>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-icon"><i class="fa-solid fa-map-marker-alt"></i></div>
+                    <h4 class="footer-col-title">OUR ADDRESS</h4>
+                    <p class="footer-col-text">123 Street New York City, United <br>States Of America</p>
+                </div>
+            </div>
+
+            <div class="social-links">
                 <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
-
             <div class="copyright">
                 &copy; 2026 All Rights Reserved
             </div>
-            </div>
-         </footer>
-    </section>
-
+        </div>
+    </footer>
 </body>
 </html>
